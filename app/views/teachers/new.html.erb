@@ -1,0 +1,20 @@
+
+<div>
+  <%=form_for  @teacher, method: :post do |f|%>
+  <div>
+  <%= f.label :FirstName%>
+  <%= f.text_field :firstName%>
+  </div>
+  <div>
+  <%= f.label :LastLame %>
+  <%= f.text_field :LastName%>
+  </div>
+  <div>
+  <%= f.label :DateofBirth %>
+  <%= f.date_field :dob%>
+  </div>
+  
+  <div>
+  <%= f.submit%></div>
+  <%end%>
+  <div>

@@ -1,0 +1,24 @@
+<%= @student.firstName%>
+    <h3>choose your class and the academic school year</h3>
+    <%= form_for  @school_year  do |f| %>
+      <%= collection_select(:school_year, :enrollment_id, Enrollment.all, :id, :className )%>
+        <%= collection_select(:school_year, :student_id, Student.all, :id, :firstName )%>
+   <div>
+  <%= f.label :school_year %>
+  <%= f.date_field  :year%>
+  </div>
+      <%= f.submit %>
+    <% end %>
+    <div>
+  <%=form_with model: @attendance do |f|%>
+  <div>
+  <%= collection_select(:attendance, :student_id, Student.all, :id, :firstName )%>
+  </div>
+    <div>
+  <%= collection_select(:attendance, :subject_id, Subject.all, :id, :subjectName )%>
+  </div>
+  
+  <%= f.submit %>
+
+  <%end%>
+</div>

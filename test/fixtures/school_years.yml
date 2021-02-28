@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enrollment: one
+  student: one
+  year: 2021-02-28
+
+two:
+  enrollment: two
+  student: two
+  year: 2021-02-28

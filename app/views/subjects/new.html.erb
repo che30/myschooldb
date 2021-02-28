@@ -1,0 +1,17 @@
+<div>
+  <%=form_with model: @subject do |f|%>
+  <div>
+  <%= f.label :subjectName%>
+  <%= f.text_field :subjectName%>
+  </div>
+  <div>
+  <%= f.label :coefficient %>
+  <%= f.text_field :coefficient %>
+  </div>
+  <div>
+    <%= collection_select(:subject, :teacher_id, Teacher.all, :id, :firstName )%>
+    </div>
+  <div>
+  <%= f.submit %></div>
+  <%end%>
+  <div>
