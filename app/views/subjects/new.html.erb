@@ -9,8 +9,17 @@
   <%= f.text_field :coefficient %>
   </div>
   <div>
+    <%= f.label :taugth_by %>
+  </div>
+  <div>
     <%= collection_select(:subject, :teacher_id, Teacher.all, :id, :firstName )%>
     </div>
+    <div>
+      <%= f.label :class_name %>
+    </div>
+    <div>
+      <%= collection_select(:subject, :enrollment_id, Enrollment.all, :id, :className,{:prompt =>true} )%>
+      </div>
   <div>
   <%= f.submit %></div>
   <%end%>

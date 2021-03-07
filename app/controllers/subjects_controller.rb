@@ -17,6 +17,6 @@ class SubjectsController < ApplicationController
   end
   private 
   def subject_params
-    params.require(:subject).permit(:subjectName,:coefficient,:teacher_id)
+    params.require(:subject).permit(:subjectName,:coefficient,:teacher_id,:enrollment_id)
   end
 end

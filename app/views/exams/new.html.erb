@@ -6,7 +6,13 @@
   <%= f.text_field :name%>
   </div>
   <div>
+    <%= f.label :exam_subject%>
+  </div>
+  <div>
     <%= collection_select(:exam, :subject_id, Subject.all, :id, :subjectName,{:prompt => true} )%>
+  </div>
+  <div>
+    <%= f.label :exam_class%>
   </div>
   <div>
   <%= collection_select(:exam, :enrollment_id, Enrollment.all, :id, :className,{:prompt => true} )%>
