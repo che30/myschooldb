@@ -1,0 +1,17 @@
+<h1>Exams#new</h1>
+<div>
+  <%=form_with model: @exam,method: :post do |f|%>
+  <div>
+  <%= f.label :name%>
+  <%= f.text_field :name%>
+  </div>
+  <div>
+    <%= collection_select(:exam, :subject_id, Subject.all, :id, :subjectName,{:prompt => true} )%>
+  </div>
+  <div>
+  <%= collection_select(:exam, :enrollment_id, Enrollment.all, :id, :className,{:prompt => true} )%>
+  </div>
+  <div>
+  <%= f.submit%></div>
+  <%end%>
+  <div>

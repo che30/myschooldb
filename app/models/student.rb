@@ -4,6 +4,10 @@ class Student < ApplicationRecord
   has_many :subjects
   has_many :attendances, dependent: :destroy
   has_many :subjects, through: :attendances
-  has_many :exams, dependent: :destroy
+  has_many :enrollments
+  has_many :marks
+  def name_with_initial
+    "#{firstName} #{lastName}"
+  end
 
 end

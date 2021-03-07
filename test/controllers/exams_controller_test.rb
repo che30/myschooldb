@@ -1,7 +1,8 @@
 require "test_helper"
 
 class ExamsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get new" do
+    get exams_new_url
+    assert_response :success
+  end
 end

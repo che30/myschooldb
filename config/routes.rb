@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'exams/new'
   root to: 'enrollments#index'
   resources :enrollments
   resources :students

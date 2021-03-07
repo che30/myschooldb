@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  exam: one
+  grade: 9.99
+
+two:
+  student: two
+  exam: two
+  grade: 9.99
