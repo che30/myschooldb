@@ -11,8 +11,17 @@
 <% end %>
 
 <% if  @student_marks%>
-  <p><%@student_marks.each do |std| %></p>
-   <p><%=std.student.firstName%> <span><%=std.student.lastName%></span></p>
+  <%= form_tag results_with_no_marks_path, method: :put do %>
+<p><%@student_marks.each do |std| %></p>
+<span><%=std.student.firstName%></span>
+<span><%=std.student.lastName%></span>
+
+ <span><%= label_tag :"grade" %></span>
+ <%= number_field_tag :"#{std.id}" %>
+
 <% end %>
+ <div class="actions"><%= submit_tag "submit" %></div>
+<% end %>
+
 <% end %>
 

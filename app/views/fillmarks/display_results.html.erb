@@ -1,3 +1,7 @@
 <h1>display result</h1>
-<p><%= @display_result.inspect%></p>
 <p><%= @test%></p>
+<p>
+<% @test.map do |i| %>
+<p><%= i%></p>
+<% end %>
+</p>
