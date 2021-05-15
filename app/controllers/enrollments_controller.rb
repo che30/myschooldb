@@ -4,6 +4,14 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments or /enrollments.json
   def index
     @enrollments = Enrollment.all
+    @students = Student.all
+    @enrolledstudent ={}
+    @students.each do |std|
+      if(std.marks.where(exam_id: 1).first !=nil)
+    @enrolledstudent [std.firstName+ " "+std.lastName]= std.marks.where(exam_id: 2).first
+      end
+  end
+   
   end
 
   # GET /enrollments/1 or /enrollments/1.json

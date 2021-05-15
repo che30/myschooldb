@@ -23,5 +23,12 @@
 </table>
 
 <br>
+<div><% @enrolledstudent.each do |std| %>
+  <div>
+ <p> <%= std[0] %></p>
+ <p>grade <%= std[1].grade %> </p>
+</div>
+  <%end%>
+</div>
 
 <%= link_to 'New Enrollment', new_enrollment_path %>

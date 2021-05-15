@@ -1,0 +1,18 @@
+<%= form_tag fillmarks_path do %>
+<div class="field">
+  <%= label_tag :subject_code %><br />
+  <%= text_field_tag :subject_code, params[:subject_code] %>
+</div>
+<div class="field">
+  <%= label_tag :sequence %><br />
+  <%= text_field_tag :sequence,params[:sequence] %>
+</div>
+<div class="actions"><%= submit_tag "submit" %></div>
+<% end %>
+
+<% if  @student_marks%>
+  <p><%@student_marks.each do |std| %></p>
+   <p><%=std.student.firstName%> <span><%=std.student.lastName%></span></p>
+<% end %>
+<% end %>
+

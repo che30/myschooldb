@@ -1,8 +1,7 @@
 class Mark < ApplicationRecord
   belongs_to :student
   belongs_to :exam
-  has_many :marks
-  def self.student_class
+  def self.student_exam_mark
     @all_students = Student.all
     @all_students.each do |student|
       counter =  student.attendances.count
